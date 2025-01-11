@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import MainChat from "./MainChat";
+import OtherThings from "./OtherThings";
 
 const demoData = [
   {
@@ -21,7 +22,8 @@ const MainInfo = () => {
   return (
     <div className="grid grid-cols-12 w-full h-full px-[7rem] gap-4 py-2">
       <div className="w-full h-full col-span-8 ">
-        <MainChat />
+        {/* <MainChat /> */}
+        <OtherThings />
       </div>
       <div className="w-full h-full col-span-4 flex flex-col gap-2">
         <div className="bg-[#0052FE] text-white w-[426px] h-[515px] rounded-[16px]">

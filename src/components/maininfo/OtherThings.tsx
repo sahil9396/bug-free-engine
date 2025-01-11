@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import PieChart from "./PieChart";
 
 const tabList = [
   "Overview",
@@ -82,10 +83,10 @@ const OtherThings = () => {
           </p>
         ))}
       </div>
-      {/* <FirstSection />
+      <FirstSection />
       <SecondSection />
       <ThirdSection />
-      <FourthSection /> */}
+      <FourthSection />
       <FifthSection />
     </div>
   );
@@ -345,13 +346,7 @@ const FourthSection = () => {
           Initial Distribution
         </h4>
         <div className="w-full h-[210px]">
-          {/* PieChart */}
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
-          nihil corporis aspernatur? Vel rem voluptatem laboriosam similique
-          eligendi accusantium vero ea rerum veritatis iste fugiat soluta, eaque
-          vitae laudantium numquam. Quae, ratione excepturi? Aliquam cumque quis
-          natus enim a nulla perspiciatis, odit dolore deleniti, consequatur
-          aspernatur velit quisquam quaerat ex!
+          <PieChart height="210px" />
         </div>
         <div className="text-[#3E424A] font-medium text-[16px] leading-[25.6px]">
           Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
@@ -451,4 +446,3 @@ const Engineer = ({
     </div>
   );
 };
-

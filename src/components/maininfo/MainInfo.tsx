@@ -54,7 +54,7 @@ const MainInfo = () => {
             </button>
           </div>
         </div>
-        <div className="bg-white w-[427px] h-full rounded-lg p-6 flex flex-col gap-6">
+        <div className="bg-white w-[427px] h-fit rounded-lg p-6 flex flex-col gap-6">
           <p className="text-2xl font-semibold leading-[28.8px] text-[#0F1629]">
             Trending Coins (24h)
           </p>

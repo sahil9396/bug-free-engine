@@ -83,9 +83,10 @@ const OtherThings = () => {
         ))}
       </div>
       {/* <FirstSection />
-      <SecondSection /> */}
-      {/* <ThirdSection /> */}
-      <FourthSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection /> */}
+      <FifthSection />
     </div>
   );
 };
@@ -366,3 +367,88 @@ const FourthSection = () => {
     </div>
   );
 };
+
+const engineers = [
+  {
+    name: "Alice Johnson",
+    role: "CTO",
+    image:
+      "https://images.unsplash.com/photo-1570622294846-4ff922b50fb8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1hbnN8ZW58MHx8MHx8fDA%3D",
+    description:
+      "Alice is responsible for overseeing the development and dissemination of technology for external customers, vendors, and other clients.",
+  },
+  {
+    name: "Bob Williams",
+    role: "Lead Engineer",
+    image:
+      "https://images.unsplash.com/photo-1565110426846-2f694d651aaf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFuc3xlbnwwfHwwfHx8MA%3D%3D",
+    description:
+      "Bob leads the engineering team with a focus on innovation and efficiency, ensuring all projects are completed on time and within budget.",
+  },
+  {
+    name: "John Smith",
+    role: "CEO",
+    image:
+      "https://plus.unsplash.com/premium_photo-1679941668727-7664fef2b6c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnN8ZW58MHx8MHx8fDA%3D",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in n",
+  },
+];
+
+const FifthSection = () => {
+  return (
+    <div className=" w-[881px] h-[776px] p-6 bg-white flex flex-col gap-6 rounded-lg">
+      <h3>Team</h3>
+      <p className="text-[#3E424A] font-medium text-[16px] leading-[25.6px]">
+        Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu
+        nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium
+        quam. Facilisis purus convallis quam augue.
+      </p>
+      {engineers.map((engineer) => (
+        <Engineer engineer={engineer} key={engineer.name} />
+      ))}
+    </div>
+  );
+};
+
+const Engineer = ({
+  engineer,
+}: {
+  engineer: {
+    name: string;
+    role: string;
+    image: string;
+    description: string;
+  };
+}) => {
+  return (
+    <div className="w-[821px] h-[177.51px] gap-4 border-[1px] border-[#E5E5E5] rounded-[7.46px] bg-[#E8F4FD] flex justify-between items-center p-[11.19px]">
+      <div className="w-[400px] flex flex-col justify-center items-center gap-4">
+        <Image
+          src={engineer.image}
+          alt="Picture of the author"
+          width={1024}
+          height={1024}
+          className="rounded-lg w-[96.76px] h-[105.09px] object-cover"
+        />
+        <div className="w-full gap-[4.12px] flex flex-col justify-center items-center">
+          <p className="text-[15px] font-medium text-[#0F1629] leading-[18.15px] text-center text-underline-position-from font-inter">
+            {engineer.name}
+          </p>
+          <p className="text-[12px] font-medium text-[#788F9B] leading-[14.52px] text-center text-underline-position-from font-inter">
+            {engineer.role}
+          </p>
+        </div>
+      </div>
+      <p className="font-inter text-[14px] font-medium text-[#0F1629] leading-[22.4px] text-left">
+        Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit
+        fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in
+        nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque
+        sed pellentesque viverra. Consectetur proin amet ut id facilisi quis
+        consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est
+        ipsum. Malesuada etiam mi gravida praesent interdu
+      </p>
+    </div>
+  );
+};
+

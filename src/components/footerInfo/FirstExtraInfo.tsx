@@ -37,7 +37,6 @@ const FirstExtraInfo = ({
         {coin.price}
       </p>
 
-      {/* Chart */}
       <SingleInfoCard data={coin.chartData} color={coin.chartColor} />
     </div>
   );

@@ -9,7 +9,7 @@ type Props = {
 const FooterSlider = ({ children }: Props) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: any) => {
+  const scroll = (direction: string) => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300;
       scrollContainerRef.current.scrollBy({
@@ -20,7 +20,7 @@ const FooterSlider = ({ children }: Props) => {
   };
 
   return (
-    <div className="relative flex items-center h-full">
+    <div className="relative flex items-center h-full w-full">
       <button
         className="absolute left-0 p-2 bg-white shadow-md rounded-full z-10"
         onClick={() => scroll("left")}
